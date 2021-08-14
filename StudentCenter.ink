@@ -148,13 +148,13 @@ The path takes a sharp edge and as you turn, <>
     the sun suddenly emerges from behind a tall tree. Thanks to your sunglasses, you're able to catch a ball zooming towards you at high speed. #didascalie
     -> pick_up(Ball)->
 - else: 
-    you're at the same time blinded by the sun and hit by something you didn't see coming your way. You lose your balance and fall into the pond.
+    you're at the same time blinded by the sun and hit by something you didn't see coming your way. You lose your balance and fall into the pond. #didascalie
     ~ Knowledges += Wet
     You are now soaking wet #infotext
  }
  
  {Knowledges has NiceStudents and Knowledges has Wet:
-    A student nearby saw you fall in the water and rushes to give you a towel.
+    A student nearby saw you fall in the water and rushes to give you a towel. #didascalie
     ~ Knowledges -= Wet
     You are now dry #infotext
  }
@@ -186,7 +186,7 @@ Everyone already has a piece of it, but as you were the last here, he hands you 
 {tasting_session > 1:
     ->->
 }
-The guide looks at you intently.
+The guide looks at you intently. #didascalie
 – Taste it!
 * – Ok, let's give it a try
     -> taste
@@ -209,11 +209,11 @@ The guide looks at you intently.
 -
     -> done
 = decline
-Everyone look a little sad that you did not try.
+Everyone look a little sad that you did not try. #didascalie
     -> done
 = suzy
 ->drop(PieceOfBuilding, "give") ->
-    She takes a bite.
+    She takes a bite. #didascalie
     – Not bad! Taste like chicken...
     – Goose, actually! corrects the guide.
     -> done
@@ -251,10 +251,10 @@ The bus you took to came here departed a long time ago. #didascalie
     You walk east to the cluster of science labs. #didascalie
     -> free_science_labs
 + [Reach the parking lot]
-    You follow a trail through a narrow strip of trees and shrubs that leads north to a parking lot
+    You follow a trail through a narrow strip of trees and shrubs that leads north to a parking lot. #didascalie
     -> free_parking
 + [Reach the Admin Building]
-    You follow a path that winds, east, around a pond to the Admin Building.
+    You follow a path that winds, east, around a pond to the Admin Building. #didascalie
     -> free_admin_building
 -> DONE
 
@@ -270,7 +270,7 @@ The guide is waiting here.
 -(opts)
 +{Inventory hasnt PieceOfBuilding} [Ask the guide another piece of building]
     – Can I get another piece of building?
-    The guide tears a chunk of the building and hands it to you.
+    The guide tears a chunk of the building and hands it to you. #didascalie
     – Sure, here is some more.
     * * – Are you sure[?] it won't impact the integrity of the building?
         – Don't worry, it'll grow back.
