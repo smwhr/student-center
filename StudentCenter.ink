@@ -9,21 +9,21 @@ LIST Knowledges = Goose, Wet, NoSuzy, NiceStudents, DogFollow
     -> bus
 
 === bus
-Suzy is your best friend from high school. She gestures outside of the bus towards the student center and a group of first year student just like you, that are waiting for the welcoming tour. #didascalie
+Suzy is your best friend from high school. She gestures outside of the bus towards the student center and a group of first year students just like you, that are waiting for the welcoming tour. #didascalie
 
 * – Just a sec, let me check my seat
     You sunglasses fell on the floor. #didascalie
     -> pick_up(Sunglasses) -> 
     – You took your time !
     * * – Yeah but at least I have style !
-        – Sure. But
+        – Sure. But 
     * * – Prefer I get a headache ?
-        – No but
+        – No but 
     - - -> bus_late
 * – Take the lead, I'm behind you ! 
     -> join_group
 * – Is this tour, like, mandatory ?
-    – No, but what do you want to do instead ? Lose yourself ? I know your sense of direction. 
+    – No, but what do you want to do instead ? Lose yourself ? I know your sense of direction. Come 
     -> bus_late
     
 = bus_late
@@ -242,6 +242,7 @@ Nothing to do here. #infotext
     -> free_hub
 
 === free_hub
+heavy
 The bus you took to came here departed a long time ago. #didascalie
 
 -> dog ->
@@ -320,7 +321,7 @@ You win (Ending 1 out of 8) # infotext
 -> DONE
 
 === goose_release_wrong
-The Robotic Goose does not like that and shoots laser at your eyes.
+The Robotic Goose does not like that and shoots lasers at your eyes.
 {Inventory has Sunglasses: 
     <> But your sunglasses stops the deathly ray and buys you a few more seconds that allow you to flea. #didascalie
     -> goose_release_tie
@@ -344,13 +345,13 @@ The Robotic Goose is faster than you. It tackles you and Suzy to the ground and 
 {tasting_session.suzy:
     Suzy lets out a cry of surprise. #didascalie
     – What the hell ?!
-    The Robotic Goose instantly smells her breath. A breath that betrays she add some goose earlier. It jumps on her and eat her alive. You manage to escape. #didascalie
+    The Robotic Goose instantly smells her breath. A breath that betrays she had some goose earlier. It jumps on her and eats her alive. You manage to escape. #didascalie
     You win (or did you really ?) (Ending 5 out of 8) # infotext
     -> DONE
 }
 {tasting_session.taste:
     * – What the hell ?!
-    The Robotic Goose instantly smells your breath. A breath that betrays you add some goose earlier. It jumps on you and eat you alive. Suzy manages to escape. #didascalie
+    The Robotic Goose instantly smells your breath. A breath that betrays you has some goose earlier. It jumps on you and eats you alive. Suzy manages to escape. #didascalie
     You lose (Ending 6 out of 8) # infotext
     -> DONE
 }
@@ -359,7 +360,7 @@ The Robotic Goose is faster than you. It tackles you and Suzy to the ground and 
     You win (Ending 7 out of 8) # infotext
     -> DONE
 }
-The Robotic Goose sees nothing wrong with you. But its attention is drawn to the dog. Is is goose that it smells on its breath ? You don't stay long enough to see the end of the fight between them as you run away from the danger. #didascalie
+The Robotic Goose sees nothing wrong with you. But its attention is drawn to the dog. Is this goose that it smells on its breath ? You don't stay long enough to see the end of the fight between them as you run away from the danger. #didascalie
     You win (or did you really ?) (Ending 8 out of 8) # infotext
 
 -> DONE
