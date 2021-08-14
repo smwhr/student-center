@@ -1,0 +1,250 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Podkova&family=DM+Serif+Display&family=Trispace:wght@100&display=swap");
+
+:root {
+  --color-dark: #666;
+  --color-background: #fcfbf7;
+  --color-text: var(--color-dark);
+  --color-dialog:  #111;
+  --color-hi: #31814d;
+  --color-hi-active: #26643c;
+  --color-faded: #ddd;
+  --color-lightgray: #eee;
+  --color-form: white;
+  --font-size: 21px;
+  --big: 1.25rem;
+  --small: 0.85rem;
+  --smaller: 0.7rem;
+  --sans-serif: "Helvetica Neue", Arial, sans-serif;
+  --serif: Georgia, serif;
+  --shadow: 0 0 5px var(--color-faded);
+  --setting-font: var(--serif);
+  --setting-align: auto;
+  --setting-theme: "auto";
+
+  --dialog: "Fira Code";
+  --scenic: "Podkova";
+  --text:  "Fira Code";
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-setting_theme=""],
+[data-setting_theme=auto] {
+    --color-dark: #1f2327;
+    --color-background: var(--color-dark);
+    --color-text: #999;
+    --color-dialog: #eee;
+    --color-hi: #ef9d1c;
+    --color-hi-active: #c58929;
+    --color-faded: #6d440a;
+    --color-form: #e0effe;
+    --color-lightgray: #462c08;
+    --shadow: 0 0 5px var(--color-dark);
+  }
+}
+[data-setting_theme=dark] {
+  --color-dark: #1f2327;
+  --color-background: var(--color-dark);
+  --color-text: #999;
+  --color-dialog: #eee;
+  --color-hi: #ef9d1c;
+  --color-hi-active: #c58929;
+  --color-faded: #6d440a;
+  --color-form: #e0effe;
+  --color-lightgray: #462c08;
+  --shadow: 0 0 5px var(--color-dark);
+}
+
+[data-setting_align=justify] {
+  --setting-align: justify;
+}
+
+body {
+    font-family: var(--text), sans-serif;
+    font-weight: lighter;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    overflow: hidden;
+}
+
+
+body.switched {
+    transition: color 0.6s, background-color 0.6s;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-family: Podkova;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 30pt;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 14pt;
+    font-style: italic;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: #BBB;
+}
+
+.header {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+/*
+  Built-in class:
+    # author: Name
+*/
+.byline {
+    font-style: italic;
+}
+
+/* 
+  Enables <iframe> support work on itch.io when using mobile iOS
+*/
+.outerContainer {
+    position: absolute;
+    display: block;
+    margin: 0;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-top: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 980px) {
+    .outerContainer {
+        margin-top: 44px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.container {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 4em;
+}
+
+.switched .container {
+    transition: background-color 0.6s;
+}
+
+p {
+    font-size: 13pt;
+    color:  var(--color-dialog);
+    line-height: 1.7em;
+    font-weight: lighter;
+    font-family: var(--dialog);
+}
+
+p.scenic, p.infotext{
+    font-family: var(--scenic);
+    color:  var(--color-text);
+    text-align: right;
+    font-size: 15pt;
+}
+
+p.didascalie{
+    font-weight: normal;
+    color:  var(--color-text);
+    font-family: var(--text);
+}
+
+a {
+  color: var(--color-hi);
+  text-underline-offset: 2.5px;
+}
+a:hover {
+  color: var(--color-hi-active);
+  text-decoration: none;
+}
+
+a {
+    font-weight: 700;
+    font-family: sans-serif;
+    transition: color 0.6s;
+    text-decoration: none;
+}
+
+a:hover {
+    transition: color 0.1s;
+}
+
+strong {
+    color: black;
+    font-weight: bold;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.container .hide {
+    opacity: 0.0;
+}
+
+.container .invisible {
+    display: none;
+}
+
+.container>* {
+    opacity: 1.0;
+    transition: opacity 1.0s;
+}
+
+/*
+  Class applied to all choices
+  (Will always appear inside <p> element by default.)
+*/
+.choice {
+    text-align: left;
+    line-height: 1.1em;
+}
+
+/* 
+  Class applied to first choice
+*/
+:not(.choice)+.choice {
+    padding-top: 1em;
+}
+
+/*
+  Class applied to choice links
+*/
+.choice a {
+    font-family: var(--dialog);
+    font-size: 13pt;
+}
+
+/* 
+  Built-in class:
+    The End # CLASS: end
+*/
+.end {
+    text-align: right;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: var(--scenic);
+}
+
+
