@@ -242,7 +242,7 @@ Nothing to do here. #infotext
     -> free_hub
 
 === free_hub
-heavy
+You are in front of the Student Center. The place looks under heavy construction. #didascalie.
 The bus you took to came here departed a long time ago. #didascalie
 
 -> dog ->
