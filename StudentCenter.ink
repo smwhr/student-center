@@ -14,16 +14,16 @@ Suzy is your best friend from high school. She gestures outside of the bus towar
 * – Just a sec, let me check my seat
     You sunglasses fell on the floor. #didascalie
     -> pick_up(Sunglasses) -> 
-    – You took your time !
-    * * – Yeah but at least I have style !
+    – You took your time!
+    * * – Yeah but at least I have style!
         – Sure. But 
-    * * – Prefer I get a headache ?
+    * * – Prefer I get a headache?
         – No but 
     - - -> bus_late
-* – Take the lead, I'm behind you ! 
+* – Take the lead, I'm behind you! 
     -> join_group
-* – Is this tour, like, mandatory ?
-    – No, but what do you want to do instead ? Lose yourself ? I know your sense of direction. Come 
+* – Is this tour, like, mandatory?
+    – No, but what do you want to do instead? Lose yourself? I know your sense of direction. Come 
     -> bus_late
     
 = bus_late
@@ -46,8 +46,8 @@ Suzy is your best friend from high school. She gestures outside of the bus towar
 === admin_building
 You reach the Admin building. It was designed by a famous architect (but not so famous that you've heard her name before). As such, it is pretty visually undescriptible except for the fact it makes you salivate. #didascalie
 
-*(suzy) – (to Suzy) That lady had a thing for food !
-*(guide) – (to guide) Excuse me, is this building edible ?
+*(suzy) – (to Suzy) That lady had a thing for food!
+*(guide) – (to guide) Excuse me, is this building edible?
 *(internal) – (internally) I am hungry now...
 
 - 
@@ -55,7 +55,7 @@ You reach the Admin building. It was designed by a famous architect (but not so 
 {guide: The guide looks at you, winks and while}
  <> the group of other students laugh heartily at your incongruous comment
 {guide: 
-    <> he tears a piece of wall and gives it to you. Who's laughing now ?
+    <> he tears a piece of wall and gives it to you. Who's laughing now?
     -> pick_up(PieceOfBuilding) -> 
     -> tasting_session ->
     -else: <>.
@@ -64,7 +64,7 @@ You reach the Admin building. It was designed by a famous architect (but not so 
 
 - The guide resumes the tour. #didascalie
 – This building was entirely conceived in the Science Lab we will visit in a short while. <> 
-{guide: I wanted to keep the surprise of its special nature but our friend spoiled it for us ! | Take a good look at it, it's not what it looks like, you're in for a surprise !}
+{guide: I wanted to keep the surprise of its special nature but our friend spoiled it for us! | Take a good look at it, it's not what it looks like, you're in for a surprise!}
 
 -> admin_building_wait
 
@@ -76,18 +76,18 @@ The students disperse to look around the Admin building. Some sit on the grass a
     – You better
     Suzy leaves you alone.
         -> sociabilize
-* – Are you asking me to hold the door ?
-  – Why do you make it sound like we're in high school ? But yes please.
+* – Are you asking me to hold the door?
+  – Why do you make it sound like we're in high school? But yes please.
   * * – Ok let's go
     -> admin_building_bathroom
   * * – I'd reather stay here.
     -> sociabilize
 * – Can't you go behing a bush ? 
-    – You're kidding me ? And why not right here in front of everyone else ?
+    – You're kidding me ? And why not right here in front of everyone else?
     * * – I did not think of [that] it but now that you suggest it...
         Suzy, angry, leaves without a word. #didascalie
             -> sociabilize
-    * * – Sorry[], that was a dumb idea, need help ?
+    * * – Sorry[], that was a dumb idea, need help?
         – Yes please.
             -> admin_building_bathroom
 
@@ -96,16 +96,16 @@ The students disperse to look around the Admin building. Some sit on the grass a
 
 === admin_building_bathroom
 You enter the building behind Suzy. She runs in the tangled corridors. You'll never be able to backtrace the path to the door. She enters a stall. #didascalie
-– Did you notice ?
+– Did you notice?
 
-* – Notice what ? [] You were running the whole time
-* – That this building is a maze ?
-* – How long are we staying inside ?
+* – Notice what? [] You were running the whole time
+* – That this building is a maze?
+* – How long are we staying inside?
 
 -
 – We saw no one. And those posters warning about the Robotic Goose.
 
-* – Can we go now, we will lose the group !
+* – Can we go now, we will lose the group!
 – Yup, I'm done. Let's go.
 -> science_labs
 
@@ -115,7 +115,7 @@ You enter the building behind Suzy. She runs in the tangled corridors. You'll ne
 {admin_building.suzy or admin_building.guide: 
     People found you funny earlier so they approach you. #didascalie
     {Knowledges hasnt Goose: 
-        You learn about the inactivation code for the Goose : "Oink Plok" #didascalie
+        You learn about the inactivation code for the Goose: "Oink Plok" #didascalie
         ~ Knowledges += Goose
     - else: 
         They seem to really like you. #didascalie
@@ -163,7 +163,7 @@ The path takes a sharp edge and as you turn, <>
 === science_labs
 You catch up with the group in front of the Science Labs. # didascalie
 You guide is  {admin_building.guide: explaining something you already know | revealing the secret promised earlier} : #didascalie
-– This is where we created the first edible building in the world, our very own Admin Building, !
+– This is where we created the first edible building in the world, our very own Admin Building!
 
 {Inventory hasnt PieceOfBuilding:
 Everyone already has a piece of it, but as you were the last here, he hands you one now. #didascalie
@@ -176,7 +176,7 @@ Everyone already has a piece of it, but as you were the last here, he hands you 
 – Our tour is now done for today. You can roam freely. If you need me, I'll be next to the Admin Building if you want to taste a piece of it.
 {Knowledges has NoSuzy:
     Suzy joins you back at that very moment. #didascalie
-    – Did I miss anything ?
+    – Did I miss anything?
 }
 -
 
@@ -187,23 +187,23 @@ Everyone already has a piece of it, but as you were the last here, he hands you 
     ->->
 }
 The guide looks at you intently.
-– Taste it !
+– Taste it!
 * – Ok, let's give it a try
     -> taste
 * – Hmm maybe later
-    – Afraid to eat it ?
+    – Afraid to eat it?
     * * – I am not that hungry, maybe later
         -> decline
-    * * – If you insist..
+    * * – If you insist...
         -> taste
-    * * {Knowledges hasnt NoSuzy} – Suzy, wanna try ?
+    * * {Knowledges hasnt NoSuzy} – Suzy, wanna try?
         -> suzy
 
 = taste
 ->drop(PieceOfBuilding, "take a bite of") ->
 – How do you like it ? asks the guide
 * – It reminds me of Christmas
-  – Indeed, it's made to taste like goose !
+  – Indeed, it's made to taste like goose!
 * – Taste like chicken 
   – Goose actually.
 -
@@ -214,8 +214,8 @@ Everyone look a little sad that you did not try.
 = suzy
 ->drop(PieceOfBuilding, "give") ->
     She takes a bite.
-    – Not bad ! Taste like chicken...
-    – Goose, actually ! corrects the guide.
+    – Not bad! Taste like chicken...
+    – Goose, actually! corrects the guide.
     -> done
 = done
 -
@@ -251,7 +251,7 @@ The bus you took to came here departed a long time ago. #didascalie
     You walk east to the cluster of science labs. #didascalie
     -> free_science_labs
 + [Reach the parking lot]
-    You follow a trail through a narrow strip of trees and shrub that leads north to a parking lot
+    You follow a trail through a narrow strip of trees and shrubs that leads north to a parking lot
     -> free_parking
 + [Reach the Admin Building]
     You follow a path that winds, east, around a pond to the Admin Building.
@@ -269,12 +269,12 @@ The guide is waiting here.
 -> dog ->
 -(opts)
 +{Inventory hasnt PieceOfBuilding} [Ask the guide another piece of building]
-    – Can I get another piece of building ?
+    – Can I get another piece of building?
     The guide tears a chunk of the building and hands it to you.
     – Sure, here is some more.
-    * * – Are you sure [?] it won't impact the integrity of the building ?
+    * * – Are you sure[?] it won't impact the integrity of the building?
         – Don't worry, it'll grow back.
-    * * 
+    * * ->
     - -
     -> pick_up(PieceOfBuilding) -> opts
 + [Get back to the entrance]
@@ -289,7 +289,7 @@ The parking lot is empty of cars. #didascalie
 }
 -(opts)
 +{Inventory has PieceOfBuilding and Knowledges hasnt DogFollow} [Give some building to the dog]
-    – Come here little doggy, do you want some good food ?
+    – Come here little doggy, do you want some good food?
     -> drop(PieceOfBuilding, "throw") ->
     You give him the little piece of edible building. He looks really happy. #didascalie
     The dog is now following you everywhere. #infotext
@@ -302,7 +302,7 @@ The parking lot is empty of cars. #didascalie
 -> DONE
 
 === goose_release
-The presence of the dog seems to have activated some kind of security device. A small door opens on the side of the building. And {Knowledges has Goose: the|a} Robotic Goose comes chaising you.
+The presence of the dog seems to have activated some kind of security device. A small door opens on the side of the building. And {Knowledges has Goose: the|a} Robotic Goose comes chasing you.
 
 + {Knowledges has Goose} – "Couac Poink"
     -> goose_release_wrong
